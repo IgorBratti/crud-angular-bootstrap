@@ -1,0 +1,36 @@
+<h1>Pessoas</h1>
+
+<table class="table table-striped table-bordered table-hover">
+  <tbody>
+    <tr>
+      <th>Nome</th>
+      <th>Idade</th>
+      <th>Data De Nascimento</th>
+      <th class="text-center">
+        <a [routerLink]="['novo']" href="#" title="Novo" alt="Novo" class="btn btn-secondary">
+          <i class="fa fa-plus" aria-hidden="true"></i> Novo
+        </a>
+      </th>
+    </tr>
+
+    <tr *ngFor="let curso of cursos">
+      <td> {{ curso.id }} </td>
+      <td> {{ curso.nome }} </td>
+      <td></td>
+      <td class="text-center" style="width: 300px">
+        <button type="button" class="btn btn-xs btn-info">
+          <i class="da da-eye" aria-hidden="true"></i> Ver
+        </button>
+        <a href="#" title="Editar" class="btn btn-xs btn-info">
+
+          <i class="fa fa-edit" aria-hidden="true"></i> Editar
+
+        </a>
+        <a href="#" title="Remover" alt="Remover" class="btn btn-xs btn-danger">
+          <i class="da da-times" aria-hidden="true"></i> Remover
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>Nenhuma pessoa cadastrada</p>
